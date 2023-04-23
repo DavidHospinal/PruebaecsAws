@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  test_david_web:
+    container_name: test_david_web
+    ports:
+      - 3000:3000
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
